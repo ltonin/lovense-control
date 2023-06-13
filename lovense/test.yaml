@@ -1,0 +1,31 @@
+lovense:
+    toy:
+        address:  192.168.1.51      # Address of the toy
+        port:     30010             # Port of the toy
+        strength: 10                # Strenght of the vibration
+lsl:
+    streamid: "lovensestream"       # LSL stream id of emotiv pro
+    events:
+        begin:      800               # LSL Event marker: protocol starts
+        end:        801             # LSL Event marker: protocol ends
+        trialstart: 100             # LSL Event marker: trial start
+        trialstop:  110             # LSL Event marker: trial stop
+        runstart:   101             # LSL Event marker: vibration start
+        runstop:    102             # LSL Event marker: vibration stop
+        pausestart: 103             # LSL Event marker: pause start
+        pausestop:  104             # LSL Event marker: pause stop
+        interrupt:  900             # LSL Event marker: user interrupt
+protocol:
+    timings:
+        begin: 5                    # Initial pause at the beginning
+        end:   5                    # Final pause at the end
+    blocks:
+        - block:                    # Block #1
+            run:   2                # Run duration [seconds]
+            pause: 2                # Pause duration [seconds]
+        - block:                    # Block #2
+            run:   3                # Run duration [seconds]
+            pause: 3                # Pause duration [seconds]
+        - block:                    # Block #3
+            run:   3                # Run duration [seconds]
+            pause: 3                # Pause duration [seconds]
